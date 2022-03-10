@@ -77,9 +77,9 @@ int main()
 
     // build and compile our shader zprogram
     // ------------------------------------
-    Shader objectShader("object.vs", "object.fs");
-    Shader lightShader("light.vs", "light.fs");
-
+   
+    Shader objectShader("code\\src\\shader\\object.vs", "code\\src\\shader\\object.fs");
+    Shader lightShader("code\\src\\shader\\light.vs", "code\\src\\shader\\light.fs");
     // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
     float vertices[] = {

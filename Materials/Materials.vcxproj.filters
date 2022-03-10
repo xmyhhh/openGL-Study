@@ -29,11 +29,11 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="code\src\main.cpp">
-      <Filter>code\src</Filter>
-    </ClCompile>
     <ClCompile Include="lib\glad.c">
       <Filter>lib</Filter>
+    </ClCompile>
+    <ClCompile Include="code\src\main.cpp">
+      <Filter>code\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
