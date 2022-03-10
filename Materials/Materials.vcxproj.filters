@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="code">
+      <UniqueIdentifier>{2200021f-f051-462d-be8f-cc201284858c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code\src">
+      <UniqueIdentifier>{a2c1b6cc-ccb5-4c05-b112-367f58fd3929}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code\include">
+      <UniqueIdentifier>{d5188777-6ec9-41b0-b07e-50c1889c6922}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{db5ac4c7-d92f-4341-bd9e-eaf0614f2419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code\src\shader">
+      <UniqueIdentifier>{025fe745-018c-4e31-99bf-17c7667c4e21}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="code\include\Camera.h">
+      <Filter>code\include</Filter>
+    </ClInclude>
+    <ClInclude Include="code\include\Shader.h">
+      <Filter>code\include</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\stb_image.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="code\src\main.cpp">
+      <Filter>code\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\glad.c">
+      <Filter>lib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="code\src\shader\object.fs">
+      <Filter>code\src\shader</Filter>
+    </None>
+    <None Include="code\src\shader\object.vs">
+      <Filter>code\src\shader</Filter>
+    </None>
+    <None Include="code\src\shader\light.fs">
+      <Filter>code\src\shader</Filter>
+    </None>
+    <None Include="code\src\shader\light.vs">
+      <Filter>code\src\shader</Filter>
+    </None>
+  </ItemGroup>
+</Project>
