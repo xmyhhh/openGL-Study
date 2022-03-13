@@ -26,6 +26,13 @@
   <ItemGroup>
     <ClCompile Include="code\src\main.cpp" />
     <ClCompile Include="lib\glad.c" />
+    <ClCompile Include="lib\imgui\source\imgui.cpp" />
+    <ClCompile Include="lib\imgui\source\imgui_demo.cpp" />
+    <ClCompile Include="lib\imgui\source\imgui_draw.cpp" />
+    <ClCompile Include="lib\imgui\source\imgui_impl_glfw.cpp" />
+    <ClCompile Include="lib\imgui\source\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="lib\imgui\source\imgui_tables.cpp" />
+    <ClCompile Include="lib\imgui\source\imgui_widgets.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="code\src\shader\object.fs" />
@@ -103,7 +110,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGL\project\Materials\code\include;C:\Users\xmy\Desktop\openGL\lib\glm;C:\Users\xmy\Desktop\openGL\lib\glad\include;C:\Users\xmy\Desktop\openGL\lib\glfw-3.3.6.bin.WIN32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGL\project\Materials\lib\imgui\include;C:\Users\xmy\Desktop\openGL\project\Materials\code\include;C:\Users\xmy\Desktop\openGL\lib\glm;C:\Users\xmy\Desktop\openGL\lib\glad\include;C:\Users\xmy\Desktop\openGL\lib\glfw-3.3.6.bin.WIN32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -120,7 +127,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGL\project\Materials\code\include;C:\Users\xmy\Desktop\openGL\lib\glm;C:\Users\xmy\Desktop\openGL\lib\glad\include;C:\Users\xmy\Desktop\openGL\lib\glfw-3.3.6.bin.WIN32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGL\project\Materials\lib\imgui\include;C:\Users\xmy\Desktop\openGL\project\Materials\code\include;C:\Users\xmy\Desktop\openGL\lib\glm;C:\Users\xmy\Desktop\openGL\lib\glad\include;C:\Users\xmy\Desktop\openGL\lib\glfw-3.3.6.bin.WIN32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -137,7 +144,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGL\project\Materials\code\include;C:\Users\xmy\Desktop\openGL\lib\glm;C:\Users\xmy\Desktop\openGL\lib\glad\include;C:\Users\xmy\Desktop\openGL\lib\glfw-3.3.6.bin.WIN32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGL\project\Materials\lib\imgui\include;C:\Users\xmy\Desktop\openGL\project\Materials\code\include;C:\Users\xmy\Desktop\openGL\lib\glm;C:\Users\xmy\Desktop\openGL\lib\glad\include;C:\Users\xmy\Desktop\openGL\lib\glfw-3.3.6.bin.WIN32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -154,7 +161,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGL\project\Materials\code\include;C:\Users\xmy\Desktop\openGL\lib\glm;C:\Users\xmy\Desktop\openGL\lib\glad\include;C:\Users\xmy\Desktop\openGL\lib\glfw-3.3.6.bin.WIN32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGL\project\Materials\lib\imgui\include;C:\Users\xmy\Desktop\openGL\project\Materials\code\include;C:\Users\xmy\Desktop\openGL\lib\glm;C:\Users\xmy\Desktop\openGL\lib\glad\include;C:\Users\xmy\Desktop\openGL\lib\glfw-3.3.6.bin.WIN32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

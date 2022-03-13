@@ -16,6 +16,12 @@
     <Filter Include="code\src\shader">
       <UniqueIdentifier>{025fe745-018c-4e31-99bf-17c7667c4e21}</UniqueIdentifier>
     </Filter>
+    <Filter Include="lib\imgui">
+      <UniqueIdentifier>{652c9bfe-c188-4cea-ae67-ca30350680af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib\imgui\src">
+      <UniqueIdentifier>{aaab00bc-4032-4be6-a0e9-49ce7f3d8a63}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\include\Camera.h">
@@ -29,11 +35,32 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="code\src\main.cpp">
+      <Filter>code\src</Filter>
+    </ClCompile>
     <ClCompile Include="lib\glad.c">
       <Filter>lib</Filter>
     </ClCompile>
-    <ClCompile Include="code\src\main.cpp">
-      <Filter>code\src</Filter>
+    <ClCompile Include="lib\imgui\source\imgui.cpp">
+      <Filter>lib\imgui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\source\imgui_demo.cpp">
+      <Filter>lib\imgui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\source\imgui_draw.cpp">
+      <Filter>lib\imgui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\source\imgui_tables.cpp">
+      <Filter>lib\imgui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\source\imgui_widgets.cpp">
+      <Filter>lib\imgui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\source\imgui_impl_glfw.cpp">
+      <Filter>lib\imgui\src</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\imgui\source\imgui_impl_opengl3.cpp">
+      <Filter>lib\imgui\src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
