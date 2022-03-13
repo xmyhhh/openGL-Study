@@ -18,9 +18,8 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 void processInput(GLFWwindow* window);
-
-// settings
-
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
+// settings 
 const unsigned int SCR_WIDTH = 1280;
 const unsigned int SCR_HEIGHT = 720;
 const char* glsl_version = "#version 330 core";
@@ -38,6 +37,8 @@ float lastFrame = 0.0f;
 // lighting
 glm::vec3 lightPos(1.2f, 1.0f, 2.0f);
 
+//mouse
+bool mouse_enable = false;
 int main()
 {
 	// Step 1:glfw: initialize and configure
@@ -58,12 +59,13 @@ int main()
 	}
 	// 设置参数window中的窗口所关联的OpenGL环境为当前环境。这个环境在当前线程中会一直保持为当前环境，直到另一个环境被设置为当前环境，或者窗口被删除为止。
 	glfwMakeContextCurrent(window);
-	//设置一个新的窗口帧缓存大小回调函数cbfun给指定窗口window。当窗口帧缓存大小发生变化时，这个回调函数将会被触发。
+	////设置一个新的窗口帧缓存大小回调函数cbfun给指定窗口window。当窗口帧缓存大小发生变化时，这个回调函数将会被触发。
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 	//设置一个新的鼠标光标位置回调函数cbfun给指定窗口window。每当鼠标光标位置发生变化的时候，这个回调函数就会被触发。
 	glfwSetCursorPosCallback(window, mouse_callback);
 	//设置一个新的鼠标滚轮回调函数cbfun给指定窗口window。当用户滚动鼠标滚轮时，这个回调函数将会被触发。
 	glfwSetScrollCallback(window, scroll_callback);
+	glfwSetKeyCallback(window, key_callback);
 	// 控制鼠标光标模式
 	//glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
@@ -171,7 +173,11 @@ int main()
 		glEnableVertexAttribArray(0);
 	}
 
+	float ambient[3] = { 1.0f, 0.5f, 0.31f };
 
+	float diffuse[3] = { 1.0f, 0.5f, 0.31f };
+
+	float specular[3] = { 0.5f, 0.5f, 0.5f };
 	// Step 6:render loop
 	// ---------------------------------------
 	while (!glfwWindowShouldClose(window))
@@ -193,29 +199,22 @@ int main()
 		{
 			static float f = 0.0f;
 			static int counter = 0;
+			//ImGui::SetNextWindowPos(ImVec2(800, 600), 0, ImVec2(1, 1));
+			ImGui::Begin("Hello, world222!");                          // Create a window called "Hello, world!" and append into it.
 
-			ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
-
-			ImGui::Text("This is some useful text.");               // Display some text (you can use a format strings too)
-
-			ImGui::SliderFloat("float", &f, 0.0f, 1.0f);            // Edit 1 float using a slider from 0.0f to 1.0f
-
-
-			if (ImGui::Button("Button"))                            // Buttons return true when clicked (most widgets return true when edited/activated)
-				counter++;
-			ImGui::SameLine();
-			ImGui::Text("counter = %d", counter);
+			ImGui::DragFloat3("Ambient ", ambient, 0.05f, 0, 1);
+			ImGui::DragFloat3("Diffuse ", diffuse, 0.05f, 0, 1);
+			ImGui::DragFloat3("Specular ", specular, 0.05f, 0, 1);
 
 			ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 			ImGui::End();
 		}
-		// input
+		// Step 6.4:process input
 		// -----
-
 
 		processInput(window);
 
-		// opengl render
+		// Step 6.5:opengl render
 		// ------
 		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -228,9 +227,9 @@ int main()
 			// light properties
 
 
-			objectShader.setVec3("light.ambient", 0.2f, 0.2f, 0.2f);
-			objectShader.setVec3("light.diffuse", 0.5f, 0.5f, 0.5f); // 将光照调暗了一些以搭配场景
-			objectShader.setVec3("light.specular", 1.0f, 1.0f, 1.0f);
+			objectShader.setVec3("light.ambient", ambient[0], ambient[1], ambient[2]);
+			objectShader.setVec3("light.diffuse", diffuse[0], diffuse[1], diffuse[2]); // 将光照调暗了一些以搭配场景
+			objectShader.setVec3("light.specular", specular[0], specular[1], specular[2]);
 
 			// material properties
 			objectShader.setVec3("material.ambient", 1.0f, 0.5f, 0.31f);
@@ -265,12 +264,12 @@ int main()
 			glBindVertexArray(lightCubeVAO);
 			glDrawArrays(GL_TRIANGLES, 0, 36);
 		}
+		// Step 6.6:ImGui::Render
 
-		// glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
 		// -------------------------------------------------------------------------------
 		ImGui::Render();
 		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
-		//交换两个缓冲区指针
+		// Step 6.7:交换两个缓冲区指针
 		glfwSwapBuffers(window);
 		//告诉GLFW检查所有等待处理的事件和消息，包括操作系统和窗口系统中应当处理的消息。如果有消息正在等待，它会先处理这些消息再返回；否则该函数会立即返回
 		glfwPollEvents();
@@ -317,6 +316,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 }
 
 
+
 // glfw: whenever the mouse moves, this callback is called
 // -------------------------------------------------------
 void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
@@ -336,8 +336,13 @@ void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
 
 	lastX = xpos;
 	lastY = ypos;
-
 	//camera.ProcessMouseMovement(xoffset, yoffset);
+	if (mouse_enable) {
+
+		camera.ProcessMouseMovement(xoffset, yoffset);
+	}
+
+
 }
 
 // glfw: whenever the mouse scroll wheel scrolls, this callback is called
@@ -345,4 +350,19 @@ void mouse_callback(GLFWwindow* window, double xposIn, double yposIn)
 void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 {
 	camera.ProcessMouseScroll(static_cast<float>(yoffset));
+}
+
+
+void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+{
+
+	switch (mods) {
+	case 0x0000:
+		mouse_enable = false;
+		break;
+	case GLFW_MOD_CONTROL:
+		mouse_enable = true;
+		break;
+	}
+
 }
