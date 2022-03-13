@@ -22,6 +22,9 @@
     <Filter Include="lib\imgui\src">
       <UniqueIdentifier>{aaab00bc-4032-4be6-a0e9-49ce7f3d8a63}</UniqueIdentifier>
     </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{861c5d2a-093b-4e2f-87ad-cdd86e0bace7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\include\Camera.h">
@@ -76,5 +79,16 @@
     <None Include="code\src\shader\light.vs">
       <Filter>code\src\shader</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resource\awesomeface.png">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="resource\container.jpg">
+      <Filter>resource</Filter>
+    </Image>
+    <Image Include="resource\container2.png">
+      <Filter>resource</Filter>
+    </Image>
   </ItemGroup>
 </Project>
