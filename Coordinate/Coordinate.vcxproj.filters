@@ -29,12 +29,21 @@
     <ClInclude Include="stb_image.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="coordinate.fs">
+    <None Include="object.fs">
       <Filter>源文件</Filter>
     </None>
-    <None Include="coordinate.vs">
+    <None Include="object.vs">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="light.vs">
+      <Filter>源文件</Filter>
+    </None>
+    <None Include="light.fs">
       <Filter>源文件</Filter>
     </None>
   </ItemGroup>

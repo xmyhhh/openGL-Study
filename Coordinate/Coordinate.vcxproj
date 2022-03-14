@@ -155,12 +155,15 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="coordinate.fs" />
-    <None Include="coordinate.vs" />
+    <None Include="object.fs" />
+    <None Include="object.vs" />
+    <None Include="light.fs" />
+    <None Include="light.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
