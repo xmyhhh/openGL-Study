@@ -1,3 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="lib\glad.c" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lib\Camera.h" />
+    <ClInclude Include="lib\Shader.h" />
+    <ClInclude Include="lib\stb_image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shader\color.fs" />
+    <None Include="shader\color.vs" />
+    <None Include="shader\light.fs" />
+    <None Include="shader\light.vs" />
+  </ItemGroup>
 </Project>
