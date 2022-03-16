@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="code">
+      <UniqueIdentifier>{f1fd4ed6-8059-4c60-834c-260fae5d4cb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{926d6492-2271-4899-8c32-c8b0fe8b27b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code\src">
+      <UniqueIdentifier>{ae5c9688-2146-4e16-8bc6-4261499df7a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code\include">
+      <UniqueIdentifier>{d23119c5-7adf-4c54-9920-b1c6ff036ce2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="code\shader">
+      <UniqueIdentifier>{cac9fbf6-dc9b-4599-8da9-c832dccb9308}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="code\src\main.cpp">
+      <Filter>code\src</Filter>
+    </ClCompile>
+    <ClCompile Include="code\src\shader.cpp">
+      <Filter>code\src</Filter>
+    </ClCompile>
+    <ClCompile Include="code\src\texture.cpp">
+      <Filter>code\src</Filter>
+    </ClCompile>
+    <ClCompile Include="code\src\game.cpp">
+      <Filter>code\src</Filter>
+    </ClCompile>
+    <ClCompile Include="code\src\resource_manager.cpp">
+      <Filter>code\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="code\include\game.h">
+      <Filter>code\include</Filter>
+    </ClInclude>
+    <ClInclude Include="code\include\shader.h">
+      <Filter>code\include</Filter>
+    </ClInclude>
+    <ClInclude Include="code\include\texture.h">
+      <Filter>code\include</Filter>
+    </ClInclude>
+    <ClInclude Include="code\include\resource_manager.h">
+      <Filter>code\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
