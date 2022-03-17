@@ -8,6 +8,13 @@
     <None Include="code\shader\sprite.fs">
       <Filter>code\shader</Filter>
     </None>
+    <None Include="cursor1.cur" />
+    <None Include="resource\level\one">
+      <Filter>resource\level</Filter>
+    </None>
+    <None Include="resource\level\two">
+      <Filter>resource\level</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="code">
@@ -27,6 +34,9 @@
     </Filter>
     <Filter Include="resource\texture">
       <UniqueIdentifier>{20c9419f-17bc-44fd-ac53-136c651865fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\level">
+      <UniqueIdentifier>{1399e00b-bcce-4a62-8e63-2bf0b9326e25}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -51,6 +61,9 @@
     <ClCompile Include="code\src\gameObject.cpp">
       <Filter>code\src</Filter>
     </ClCompile>
+    <ClCompile Include="code\src\gameLevel.cpp">
+      <Filter>code\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\include\game.h">
@@ -71,6 +84,10 @@
     <ClInclude Include="code\include\gameObject.h">
       <Filter>code\include</Filter>
     </ClInclude>
+    <ClInclude Include="code\include\gameLevel.h">
+      <Filter>code\include</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="resource\textures\awesomeface.png">
@@ -85,5 +102,22 @@
     <Image Include="resource\textures\container2_specular.png">
       <Filter>resource\texture</Filter>
     </Image>
+    <Image Include="resource\textures\block.png">
+      <Filter>resource\texture</Filter>
+    </Image>
+    <Image Include="resource\textures\block_solid.png">
+      <Filter>resource\texture</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BreakOut.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resource\level\three">
+      <Filter>resource\level</Filter>
+    </Text>
+    <Text Include="resource\level\four">
+      <Filter>resource\level</Filter>
+    </Text>
   </ItemGroup>
 </Project>
