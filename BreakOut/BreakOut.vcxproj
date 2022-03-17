@@ -73,15 +73,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>.</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>.</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <OutDir>.</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>.</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -148,20 +152,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="code\shader\sprite.fs" />
+    <None Include="code\shader\sprite.vs" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="code\src\game.cpp" />
+    <ClCompile Include="code\src\gameObject.cpp" />
     <ClCompile Include="code\src\main.cpp" />
     <ClCompile Include="code\src\resource_manager.cpp" />
     <ClCompile Include="code\src\shader.cpp" />
+    <ClCompile Include="code\src\spriteRenderer.cpp" />
     <ClCompile Include="code\src\texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\include\game.h" />
+    <ClInclude Include="code\include\gameObject.h" />
     <ClInclude Include="code\include\resource_manager.h" />
     <ClInclude Include="code\include\shader.h" />
+    <ClInclude Include="code\include\spriteRenderer.h" />
     <ClInclude Include="code\include\texture.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resource\textures\awesomeface.png" />
+    <Image Include="resource\textures\container.jpg" />
+    <Image Include="resource\textures\container2.png" />
+    <Image Include="resource\textures\container2_specular.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

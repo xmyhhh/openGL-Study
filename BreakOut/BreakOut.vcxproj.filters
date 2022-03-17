@@ -2,6 +2,12 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="code\shader\sprite.vs">
+      <Filter>code\shader</Filter>
+    </None>
+    <None Include="code\shader\sprite.fs">
+      <Filter>code\shader</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="code">
@@ -18,6 +24,9 @@
     </Filter>
     <Filter Include="code\shader">
       <UniqueIdentifier>{cac9fbf6-dc9b-4599-8da9-c832dccb9308}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\texture">
+      <UniqueIdentifier>{20c9419f-17bc-44fd-ac53-136c651865fe}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -36,6 +45,12 @@
     <ClCompile Include="code\src\resource_manager.cpp">
       <Filter>code\src</Filter>
     </ClCompile>
+    <ClCompile Include="code\src\spriteRenderer.cpp">
+      <Filter>code\src</Filter>
+    </ClCompile>
+    <ClCompile Include="code\src\gameObject.cpp">
+      <Filter>code\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\include\game.h">
@@ -50,5 +65,25 @@
     <ClInclude Include="code\include\resource_manager.h">
       <Filter>code\include</Filter>
     </ClInclude>
+    <ClInclude Include="code\include\spriteRenderer.h">
+      <Filter>code\include</Filter>
+    </ClInclude>
+    <ClInclude Include="code\include\gameObject.h">
+      <Filter>code\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resource\textures\awesomeface.png">
+      <Filter>resource\texture</Filter>
+    </Image>
+    <Image Include="resource\textures\container.jpg">
+      <Filter>resource\texture</Filter>
+    </Image>
+    <Image Include="resource\textures\container2.png">
+      <Filter>resource\texture</Filter>
+    </Image>
+    <Image Include="resource\textures\container2_specular.png">
+      <Filter>resource\texture</Filter>
+    </Image>
   </ItemGroup>
 </Project>

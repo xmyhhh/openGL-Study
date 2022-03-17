@@ -16,7 +16,7 @@ Shader ResourceManager::LoadShader(const GLchar* vShaderFile, const GLchar* fSha
 {
 	Shaders[name] = loadShaderFromFile(vShaderFile, fShaderFile, gShaderFile);
 	return Shaders[name];
-}   
+}
 
 Shader ResourceManager::GetShader(std::string name)
 {
@@ -89,7 +89,7 @@ Shader ResourceManager::loadShaderFromFile(const GLchar* vShaderFile, const GLch
 }
 
 
-Texture2D ResourceManager::loadTextureFromFile(const GLchar* path,GLboolean alpha)
+Texture2D ResourceManager::loadTextureFromFile(const GLchar* path, GLboolean alpha)
 {
 	Texture2D texture;
 	unsigned int textureID;
@@ -99,7 +99,7 @@ Texture2D ResourceManager::loadTextureFromFile(const GLchar* path,GLboolean alph
 	unsigned char* data = stbi_load(path, &width, &height, &nrComponents, 0);
 	if (data)
 	{
-		texture.Generate(width, height, data);
+		texture.Generate(width, height, nrComponents, data);
 
 		stbi_image_free(data);
 

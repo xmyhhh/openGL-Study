@@ -40,7 +40,7 @@ int main(int argc, char* argv[])
     glEnable(GL_CULL_FACE);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
+    Game Breakout(SCREEN_WIDTH, SCREEN_HEIGHT);
     // Initialize game
     Breakout.Init();
 
