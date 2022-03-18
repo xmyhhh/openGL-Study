@@ -40,7 +40,7 @@ int main(int argc, char* argv[])
     glEnable(GL_CULL_FACE);
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    Game Breakout(SCREEN_WIDTH, SCREEN_HEIGHT);
+
     // Initialize game
     Breakout.Init();
 
@@ -89,7 +89,9 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
     {
         if (action == GLFW_PRESS)
             Breakout.Keys[key] = GL_TRUE;
-        else if (action == GLFW_RELEASE)
+        else if (action == GLFW_RELEASE) {
             Breakout.Keys[key] = GL_FALSE;
+        }
+
     }
 }
