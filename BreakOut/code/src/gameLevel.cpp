@@ -79,6 +79,10 @@ void GameLevel::Draw(SpriteRenderer& renderer)
     for (GameObject& tile : this->Bricks)
         if (!tile.Destroyed)
             tile.Draw(renderer);
+        else {
+            int a = 0;
+        }
+
 }
 
 GLboolean GameLevel::IsCompleted()
@@ -88,3 +92,4 @@ GLboolean GameLevel::IsCompleted()
             return GL_FALSE;
     return GL_TRUE;
 }
+

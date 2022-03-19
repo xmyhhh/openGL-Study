@@ -9,7 +9,12 @@ enum GameState {
 	GAME_MENU,
 	GAME_WIN
 };
-
+enum Direction {
+	UP,
+	RIGHT,
+	DOWN,
+	LEFT
+};
 class Game
 {
 public:
@@ -27,7 +32,10 @@ public:
 	// ”Œœ∑—≠ª∑
 	void ProcessInput(GLfloat dt);
 	void Update(GLfloat dt);
-	void Render();
+	void Render(); 
+	void DoCollisions();
+	void ResetLevel();
+	void ResetPlayer();
 };
 
 #endif

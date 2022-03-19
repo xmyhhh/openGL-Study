@@ -160,6 +160,7 @@
     <None Include="resource\level\two" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="code\src\ballObject.cpp" />
     <ClCompile Include="code\src\game.cpp" />
     <ClCompile Include="code\src\gameLevel.cpp" />
     <ClCompile Include="code\src\gameObject.cpp" />
@@ -170,6 +171,7 @@
     <ClCompile Include="code\src\texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="code\include\ballObject.h" />
     <ClInclude Include="code\include\game.h" />
     <ClInclude Include="code\include\gameLevel.h" />
     <ClInclude Include="code\include\gameObject.h" />

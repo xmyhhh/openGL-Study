@@ -64,6 +64,9 @@
     <ClCompile Include="code\src\gameLevel.cpp">
       <Filter>code\src</Filter>
     </ClCompile>
+    <ClCompile Include="code\src\ballObject.cpp">
+      <Filter>code\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\include\game.h">
@@ -88,6 +91,9 @@
       <Filter>code\include</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="code\include\ballObject.h">
+      <Filter>code\include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="resource\textures\awesomeface.png">
