@@ -93,7 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGL\project\BreakOut\code\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGLStudy\openGL\project\BreakOut\code\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -109,7 +109,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGL\project\BreakOut\code\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGLStudy\openGL\project\BreakOut\code\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,7 +125,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGL\project\BreakOut\code\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGLStudy\openGL\project\BreakOut\code\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -141,7 +141,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGL\project\BreakOut\code\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\xmy\Desktop\openGLStudy\openGL\project\BreakOut\code\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -152,9 +152,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="code\shader\particle.fs" />
+    <None Include="code\shader\particle.vs" />
     <None Include="code\shader\sprite.fs" />
     <None Include="code\shader\sprite.vs" />
-    <None Include="cursor1.cur" />
     <None Include="packages.config" />
     <None Include="resource\level\one" />
     <None Include="resource\level\two" />
@@ -165,6 +166,7 @@
     <ClCompile Include="code\src\gameLevel.cpp" />
     <ClCompile Include="code\src\gameObject.cpp" />
     <ClCompile Include="code\src\main.cpp" />
+    <ClCompile Include="code\src\particleGenerator.cpp" />
     <ClCompile Include="code\src\resource_manager.cpp" />
     <ClCompile Include="code\src\shader.cpp" />
     <ClCompile Include="code\src\spriteRenderer.cpp" />
@@ -175,6 +177,7 @@
     <ClInclude Include="code\include\game.h" />
     <ClInclude Include="code\include\gameLevel.h" />
     <ClInclude Include="code\include\gameObject.h" />
+    <ClInclude Include="code\include\particleGenerator.h" />
     <ClInclude Include="code\include\resource_manager.h" />
     <ClInclude Include="code\include\shader.h" />
     <ClInclude Include="code\include\spriteRenderer.h" />
@@ -188,9 +191,6 @@
     <Image Include="resource\textures\container.jpg" />
     <Image Include="resource\textures\container2.png" />
     <Image Include="resource\textures\container2_specular.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="BreakOut.rc" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="resource\level\four" />

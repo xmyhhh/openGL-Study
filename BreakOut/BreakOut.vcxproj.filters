@@ -8,12 +8,17 @@
     <None Include="code\shader\sprite.fs">
       <Filter>code\shader</Filter>
     </None>
-    <None Include="cursor1.cur" />
     <None Include="resource\level\one">
       <Filter>resource\level</Filter>
     </None>
     <None Include="resource\level\two">
       <Filter>resource\level</Filter>
+    </None>
+    <None Include="code\shader\particle.fs">
+      <Filter>code\shader</Filter>
+    </None>
+    <None Include="code\shader\particle.vs">
+      <Filter>code\shader</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -67,6 +72,9 @@
     <ClCompile Include="code\src\ballObject.cpp">
       <Filter>code\src</Filter>
     </ClCompile>
+    <ClCompile Include="code\src\particleGenerator.cpp">
+      <Filter>code\src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="code\include\game.h">
@@ -94,6 +102,9 @@
     <ClInclude Include="code\include\ballObject.h">
       <Filter>code\include</Filter>
     </ClInclude>
+    <ClInclude Include="code\include\particleGenerator.h">
+      <Filter>code\include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="resource\textures\awesomeface.png">
@@ -114,9 +125,6 @@
     <Image Include="resource\textures\block_solid.png">
       <Filter>resource\texture</Filter>
     </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="BreakOut.rc" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="resource\level\three">
